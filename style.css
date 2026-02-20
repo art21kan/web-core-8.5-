@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'TTLakes';
+    src: url(Font/TTLakes-Regular.woff)
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+}
+
+section{
+    font-family: 'TTLakes';
+    color: #7E7E82;
+    background-color:#F8F8F8; 
+}
+
+.brand{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 60px;
+    gap: 32px;
+    padding: 24px 32px 24px 32px;
+     
+}
+
+.brand__logo{
+    width: 240px;
+    height: 72px;
+    background-color: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 10px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.caption{
+    padding: 16px 0 16px 32px;
+    background-color: linear-gradient(to right, #F8F8F8, #FFFFFF);
+}
+
+.show{
+    color: #1B1C21;
+    background-color:#F8F8F8;
+    padding-left: 31px;
+    padding-bottom: 34px;
+}
+
+
+@media(max-width: 768px) {
+    .brand__logo--viewsonic,
+    .brand__logo--sony{
+        display: none;
+    }
+
+    .brand{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    }
+}
