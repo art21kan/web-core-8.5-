@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    
 </head>
 <body>
     <section>
         <div class="caption">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</div>
 
-        <div class="brand">
+        <div class="brand" id="brandGrid">
             <div class="brand__logo">
             <img src="Logos/Bitmap.png" alt="lenovo logo">
             <img src="Icons/go.svg" alt="arrow">
@@ -51,13 +52,27 @@
             <img src="Icons/go.svg" alt="arrow">
             </div>
             
+            <div class="brand__logo hidden">
+            <img src="Logos/Bitmap.png" alt="lenovo logo">
+            <img src="Icons/go.svg" alt="arrow">
+            </div>
+
+            <div class="brand__logo hidden">
+            <img  src="Logos/Bitmap (2).png" alt="samsung logo">
+            <img src="Icons/go.svg" alt="arrow">
+            </div>
+
+            <div class="brand__logo hidden">
+            <img  src="Logos/bitmap apple.png" alt="apple logo">
+            <img src="Icons/go.svg" alt="arrow">
+            </div>
         </div>
 
-        <div class="show">
+        <div class="show" id="showButton">
             <img src="Icons/expand.svg" alt="show">
             <span>Показать все</span>
         </div>
-    
     </section>
+<script src="script.js"></script>
 </body>
 </html>

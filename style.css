@@ -7,23 +7,18 @@
     box-sizing: border-box;
 }
 
-body{
-    
-}
-
 section{
     font-family: 'TTLakes';
     color: #7E7E82;
-    background-color:#F8F8F8; 
+    background-color:#F8F8F8;
 }
 
 .brand{
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-columns: repeat(auto-fill, 240px);
     grid-template-rows: 60px;
     gap: 32px;
     padding: 24px 32px 24px 32px;
-     
 }
 
 .brand__logo{
@@ -33,14 +28,16 @@ section{
     border: 1px solid #EAEAEA;
     border-radius: 10px;
     display: flex;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items: center;
     width: 100%;
+    padding:16px;
 }
 
 .caption{
     padding: 16px 0 16px 32px;
-    background-color: linear-gradient(to right, #F8F8F8, #FFFFFF);
+    background: linear-gradient(to right, #F8F8F8, #FFFFFF);
+    border-top: solid 1px #D9FFF5;
 }
 
 .show{
@@ -48,12 +45,29 @@ section{
     background-color:#F8F8F8;
     padding-left: 31px;
     padding-bottom: 34px;
+    cursor: pointer;
+}
+
+.hide{
+    color: #1B1C21;
+    background-color:#F8F8F8;
+    padding-left: 31px;
+    padding-bottom: 34px;
+}
+
+.hidden{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    padding:16px;
 }
 
 
 @media(max-width: 768px) {
     .brand__logo--viewsonic,
-    .brand__logo--sony{
+    .brand__logo--sony,
+    .hidden{
         display: none;
     }
 
@@ -61,4 +75,21 @@ section{
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
     }
+
+    .brand__logo{
+    width: 224px;
+    height: 72px;
+}
+}
+
+@media(max-width:320px) {
+    .brand{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .brand__logo{
+    width: 240px;
+    height: 72px;
+}
 }
