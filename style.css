@@ -15,7 +15,7 @@ section{
 
 .brand{
     display: grid;
-    grid-template-columns: repeat(auto-fill, 240px);
+    grid-template-columns: 2fr 2fr 2fr 2fr;
     grid-template-rows: 60px;
     gap: 32px;
     padding: 24px 32px 24px 32px;
@@ -46,6 +46,8 @@ section{
     padding-left: 31px;
     padding-bottom: 34px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .hide{
@@ -83,12 +85,24 @@ section{
 }
 
 @media(max-width:320px) {
-    .brand{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    
-    .brand__logo{
+    .brand,
+    .brand__logo,
+    .show{
+        display: none;
+}
+
+.swiper{
+    width: 100%;
+}
+
+.swiper-wrapper{
+    display: flex;
+    align-items: center;
+    background-color: #F8F8F8;
+    color: white;
+}
+
+.swiper-slide{
     width: 240px;
     height: 72px;
 }

@@ -10,5 +10,14 @@ showButton.addEventListener("click", () => {
     item.style.display = isOpen ? "flex" : "none";
   });
 
-  showButton.textContent = isOpen ? "Скрыть" : "Показать все";
+  showButton.innerHTML = isOpen ? "Скрыть" : "Показать все";
 });
+
+const swiper = new swiper('.swiper', {
+direction: 'horizontal',
+loop: true,
+navigation:{
+  nextEl:
+  prevEl:
+},
+})
