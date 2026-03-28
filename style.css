@@ -65,8 +65,11 @@ section{
     padding:16px;
 }
 
+.swiper{
+    display: none;
+}
 
-@media(max-width: 768px) {
+@media(max-width: 1120px) {
     .brand__logo--viewsonic,
     .brand__logo--sony,
     .hidden{
@@ -84,26 +87,22 @@ section{
 }
 }
 
-@media(max-width:320px) {
+@media(max-width:768px) {
     .brand,
-    .brand__logo,
     .show{
         display: none;
 }
 
 .swiper{
+    display: flex;
+    position: relative;
     width: 100%;
 }
 
 .swiper-wrapper{
     display: flex;
-    align-items: center;
     background-color: #F8F8F8;
     color: white;
-}
-
-.swiper-slide{
-    width: 240px;
-    height: 72px;
+    margin: 16px 16px 32px 16px;
 }
 }

@@ -1,3 +1,13 @@
+const swiper = new Swiper('.swiper', {
+direction: 'horizontal',
+pagination: {
+  el:'.swiper-pagination',
+  clickable: true,
+  },
+  spaceBetween: 16,
+  slidesPerView: 2,
+})
+
 const showButton = document.getElementById("showButton");
 const hiddenItems = document.querySelectorAll(".brand__logo.hidden");
 
@@ -10,14 +20,14 @@ showButton.addEventListener("click", () => {
     item.style.display = isOpen ? "flex" : "none";
   });
 
-  showButton.innerHTML = isOpen ? "Скрыть" : "Показать все";
-});
+ showButton.innerHTML = isOpen
+  ? `
+    <img src="Icons/expand.svg" alt="show" style="transform: rotate(180deg);">
+    <span>Скрыть</span>
+  `
+  : `
+    <img src="Icons/expand.svg" alt="show">
+    <span>Показать все</span>
+  `
+  })
 
-const swiper = new swiper('.swiper', {
-direction: 'horizontal',
-loop: true,
-navigation:{
-  nextEl:
-  prevEl:
-},
-})
